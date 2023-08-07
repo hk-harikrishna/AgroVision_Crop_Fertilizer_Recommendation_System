@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Crop Result</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #333;
+        }
+
+        .logo img {
+            width: 150px;
+
+            height: 80px;
+        }
+
+
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            height: max-content;
+        }
+
+        nav li {
+            margin-left: 0 10px;
+        }
+
+
+        nav li a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            font-size: x-large;
+            padding: 12px;
+            text-decoration: none;
+        }
+
+        nav li a:hover {
+            background-color: #42c738;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            margin: auto;
+            margin-top: 50px;
+            padding: 20px;
+            max-width: 80%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .containerimage {
+            position: relative;
+            width: 50%;
+            height: 150%;
+        }
+
+        .containertext {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .containertext2 {
+            text-transform: capitalize;
+            font-weight: normal;
+        }
+
+        .footer-end {
+            width: 100%;
+            background-color: #333;
+            margin-top: 20px;
+            color: white;
+            height: max-content;
+            padding: 10px;
+        }
+
+        .footer-content {
+            justify-content: center;
+            margin-left: 350px;
+            margin-right: 350px;
+            position: relative;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/agrovisionlogo1.png') }}" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('crop_recommend') }}">Crop</a></li>
+                <li><a href="{{ url_for('fertilizer_recommendation') }}">Fertilizer</a></li>
+                <li><a href="{{ url_for('aboutus') }}">AboutUs</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="containerimage">
+            <img src="{{ url_for('static', filename='images/cropresult.png') }}" alt="Logo">
+
+        </div>
+        <div class="containertext">
+            <h2>Recommended Crop </h2>
+            <p style="font-size:x-large;">{{ prediction }}
+            </p>
+            <div class="containertext2">
+                <p>{{ crop_recommend }}
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="footer-end">
+        <center>
+            <img src="{{ url_for('static', filename='images/agrovisionlogo1.png') }}" style="width:200px;height:100px"
+                alt="Logo">
+        </center>
+
+    </div>
+</body>
+
+</html>

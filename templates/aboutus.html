@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroVision-Aboutus</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #333;
+        }
+
+        .logo img {
+            width: 150px;
+
+            height: 80px;
+        }
+
+
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            height: max-content;
+        }
+
+        nav li {
+            margin-left: 0 10px;
+        }
+
+
+        nav li a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            font-size: x-large;
+            padding: 12px;
+            text-decoration: none;
+        }
+
+        nav li a:hover {
+            background-color: #42c738;
+        }
+
+        .agro-info p {
+            width: 80%;
+            margin-left: 150px;
+            margin-right: 100px;
+            font-weight: 300;
+            font-size: x-large;
+            justify-content: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .team {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            margin: 0 15px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            width: 300px;
+            border-radius: 5px;
+            height: fit-content;
+            background-color: #f2f2f2f2;
+
+
+        }
+
+        .card:hover {
+            transform: scale(1.08);
+        }
+
+        .card a {
+            text-decoration: none;
+        }
+
+        .card img {
+            border-radius: 5px 5px 0 0;
+            height: 300px;
+            width: 300px;
+
+        }
+
+        .text-container {
+            padding-left: 5px;
+            pointer-events: none;
+            color: black;
+            text-decoration: none;
+            pointer-events: none;
+        }
+
+        .footer-end {
+            width: 100%;
+            background-color: #333;
+            margin-top: 150px;
+            color: white;
+            height: max-content;
+            padding: 10px;
+        }
+
+        .footer-content {
+            justify-content: center;
+            margin-left: 350px;
+            margin-right: 350px;
+            position: relative;
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/agrovisionlogo1.png') }}" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('crop_recommend') }}">Crop</a></li>
+                <li><a href="{{ url_for('fertilizer_recommendation') }}">Fertilizer</a></li>
+                <li><a href="{{ url_for('aboutus') }}">AboutUs</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <center>
+        <h1>About AgroVision</h1>
+    </center>
+    <div class="agro-info">
+        <p>AgroVision is a machine learning-based system that recommends the best crop to grow and fertilizers to use
+            based on environmental factors, with the aim of helping farmers optimize their crop yields and reduce waste.
+            By analyzing soil data, weather patterns, and other environmental factors, the system generates personalized
+            crop and fertilizer recommendations for farmers, providing insights on optimal crop varieties and resource
+            management.
+        </p>
+    </div>
+    <br>
+    <center>
+        <h1>WHO WE ARE</h1>
+    </center>
+    <center>
+        <h2>Meet the AgroVision Team</h2>
+    </center>
+    <br>
+    <br>
+    <div class="team">
+
+
+        <div class="card">
+            <a href="#"> </a>
+            <div class="text-container">
+                <center>
+                    <h2>Harikrishna </h2>
+                </center>
+
+                <center>
+                    <h2><b>Frontend Developer</b></h2>
+                </center>
+            </div>
+        </div>
+
+
+
+
+        <div class="card">
+            <a href="#">
+            </a>
+            <div class="text-container">
+                <center>
+                    <h2> S.S.V.Saravn</h2>
+                </center>
+                <center>
+                    <h2> <b> Backend Developer
+                        </b>
+                    </h2>
+                </center>
+            </div>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <div class="footer-end">
+        <center>
+            <img src="{{ url_for('static', filename='images/agrovisionlogo1.png') }}" style="width:200px;height:100px"
+                alt="Logo">
+        </center>
+
+    </div>
+    </div>
+</body>
+
+
+
+
+</html>

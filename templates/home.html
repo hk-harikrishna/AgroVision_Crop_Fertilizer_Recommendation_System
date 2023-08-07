@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroVision</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+
+    <style>
+         body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #333;
+        }
+
+        .logo img {
+            width: 150px;
+
+            height: 80px;
+        }
+
+
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            height: max-content;
+        }
+
+        nav li {
+            margin-left: 0 10px;
+        }
+
+
+        nav li a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            font-size: x-large;
+            padding: 12px;
+            text-decoration: none;
+        }
+
+        nav li a:hover {
+            background-color: #42c738;
+        }
+
+
+
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 32px 32px 32px 32px rgba(0, 0, 0, 0.2);
+            margin: auto;
+            margin-top: 70px;
+            padding: 20px;
+            width: 90%;
+            height: 400px;
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-evenly;
+        }
+
+
+        .textintro {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .textintro h1 {
+            margin-top: 150px;
+            font-size: 100px;
+            position: relative;
+        }
+
+        .introimage {
+            width: 50vw;
+            position: relative;
+        }
+
+        .introimage img {
+            width: 100%;
+            height: 150%;
+            position: absolute;
+            top: -35%;
+            right: -5%;
+        }
+
+
+
+
+        .container2 {
+            margin: auto;
+            margin-top: 30px;
+            padding: 20px;
+            width: 90%;
+            height: 400px;
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-evenly;
+
+        }
+
+        .imagecontainer2 {
+            width: 50vw;
+            position: relative;
+        }
+
+        .imagecontainer2 img {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+
+
+
+        }
+
+        .benifits {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .benifits-elements {
+            width: fit-content;
+            height: fit-content;
+            color: black;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            align-items: center;
+            display: inline;
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        .services {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            margin: 0 15px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            width: 400px;
+            border-radius: 5px;
+            height: fit-content;
+            background-color: #f2f2f2f2;
+
+
+        }
+
+        .card:hover {
+            transform: scale(1.08);
+        }
+
+        .card a {
+            text-decoration: none;
+        }
+
+        .card img {
+            border-radius: 5px 5px 0 0;
+            height: 200px;
+            width: 400px;
+        }
+
+        .text-container {
+            padding-left: 5px;
+            pointer-events: none;
+            color: black;
+            text-decoration: none;
+            pointer-events: none;
+        }
+
+        .footer-end {
+            width: 100%;
+            background-color: #333;
+            margin-top: 20px;
+            color: white;
+            height: max-content;
+            padding: 10px;
+        }
+
+        .footer-content {
+            justify-content: center;
+            margin-left: 350px;
+            margin-right: 350px;
+            position: relative;
+
+
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+           <img src="{{ url_for('static', filename='images/agrovisionlogo1.png') }}" alt="My Image">
+
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('crop_recommend') }}">Crop</a></li>
+                <li><a href="{{ url_for('fertilizer_recommendation') }}">Fertilizer</a></li>
+                <li><a href="{{ url_for('aboutus') }}">AboutUs</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="textintro">
+            <h1
+                style="font-size:x-large;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                Welcome To The Future of
+                Agriculture
+            </h1>
+            <p><b>Harvesting a Brighter Tomorrow.
+                </b>
+            <p>
+
+        </div>
+
+
+        <div class=" introimage">
+                    <img src="{{ url_for('static', filename='images/agrovisionlogo1.png') }}" alt="My Image">
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <center>
+        <h1> Benefits </h1>
+    </center>
+    <div class="container2">
+        <div class="imagecontainer2">
+                     <img src="{{ url_for('static', filename='images/agroben.jpg') }}" alt="My Image">
+
+        </div>
+        <div class="benifits">
+            <div class="benefits-elements">
+
+                <h2><i class="fa-solid fa-square-check fa-xl" style="color: #42c738;"></i> Make informed decisions
+                    with
+                    real-time weather data and soil analysis.</h2>
+
+            </div>
+            <div class="benefits-elements">
+
+                <h2><i class="fa-solid fa-square-check fa-xl" style="color: #42c738;"></i> Increase profits with
+                    precision agriculture technology that optimizes your crop yields.</h2>
+
+            </div>
+            <div class="benefits-elements">
+
+                <h2><i class="fa-solid fa-square-check fa-xl" style="color: #42c738;"></i> Save time and money with our
+                    easy-to-use platform for crop and fertilizer management.</h2>
+
+            </div>
+
+            <div class="benefits-elements">
+
+                <h2><i class="fa-solid fa-square-check fa-xl" style="color: #42c738;"></i> Achieve sustainable farming
+                    practices with our eco-friendly crop and fertilizer recommendations.
+                </h2>
+
+            </div>
+
+        </div>
+    </div>
+    <center>
+        <h1> Our Services </h1>
+    </center>
+
+    <div class="services">
+
+
+        <div class="card">
+            <a href="{{ url_for('crop_recommend') }}">
+                       <img src="{{ url_for('static', filename='images/crop.jfif') }}" alt="My Image">
+</a>
+            <div class="text-container">
+                <h2>Crop </h2>
+                <h4><b>Recommendation about the type of crops to be cultivated which is best suited
+							for the respective conditions</b></h4>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <a href="{{ url_for('fertilizer_recommendation') }}">
+                           <img src="{{ url_for('static', filename='images/fertilizer.jpg') }}" alt="My Image">
+
+            </a>
+            <div class="text-container">
+                <h2>Fertilizer </h2>
+                <h4> <b> Recommendation about the type of fertilizer best suited for the particular soil
+							and the recommended crop
+                    </b>
+                </h4>
+            </div>
+        </div>
+        </a>
+    </div>
+    <br>
+    <div class="footer-end">
+        <center>
+            <img src="{{ url_for('static', filename='images/agrovisionlogo1.png') }}" style="width:200px;height:100px" alt="Logo">
+        </center>
+
+    </div>
+
+</body>
+
+</html>
